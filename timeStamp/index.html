@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Timestamp Microservice</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <style>
+    .container {
+      max-width: 730px;
+      padding: 15px 0;
+    }
+    
+    .jumbotron {
+      padding: 5px 0;
+    }
+  
+  </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron text-center">
+        <h1>Timestamp microservice</h1>
+        <p class="lead">This microservice allows you to get JSON format of date, you pass into url. You can also get current date just by clicking button below.</p>
+        <p><button class="btn btn-lg btn-success" onclick="getCurrentTime()">Get current date!</button></p>
+      </div>
+      <div class="row">
+        <h3>Examples:</h3>
+        <blockquote>
+          <code>https://api-projects-overpeek-1.c9users.io/123456789</code><br>
+          <code>https://api-projects-overpeek-1.c9users.io/December%2015,%202015</code>
+        </blockquote>
+      </div>
+    </div>
+  <script>
+    function getCurrentTime() {
+      var currDate = new Date().getTime().toString();
+      window.location.href = "https://api-projects-overpeek-1.c9users.io/" + currDate;
+    }
+  </script>
+  </body>
+</html>
